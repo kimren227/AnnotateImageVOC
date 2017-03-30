@@ -40,8 +40,8 @@ def points_to_top_left_width_height(points):
     point_1, point_2 = points
     x_1, y_1 = point_1
     x_2, y_2 = point_2
-    x = max(x_1, x_2)
-    y = max(y_1, y_2)
+    x = min(x_1, x_2)
+    y = min(y_1, y_2)
     w = abs(x_1 - x_2)
     h = abs(y_1 - y_2)
     return [str(i) for i in [x,y,w,h]]
